@@ -2,12 +2,12 @@
 {% block content_main %}
     {{ parent() }}
 
-    {{ style({ include: oViewConf.getModuleUrl('oxdemo', 'css/styles.css') }) }}
+    {{ style({ include: oViewConf.getModuleUrl('oxsdemo', 'css/styles.css') }) }}
 
     <div id="overlay"></div>
     <div id="demoshop-banner">
         <div id="banner-header">
-            <img src="{{ oViewConf.getModuleUrl('oxdemo', 'pictures/OXID_Logo.png') }}" alt="OXID Logo">
+            <img src="{{ oViewConf.getModuleUrl('oxsdemo', 'pictures/OXID_Logo.png') }}" alt="OXID Logo">
             <button id="close-btn">X</button>
         </div>
         <div id="banner-content">
@@ -46,6 +46,6 @@
     </div>
     <button id="demoshop-toggle-btn">{{ translate({ ident: 'OXDEMO_BUTTON' }) }}</button>
 
-    {{ script({ include: oViewConf.getModuleUrl("oxdemo", "js/scripts.js") }) }}
+    {{ script({ include: oViewConf.getModuleUrl("oxsdemo", "js/scripts.js") }) }}
 
 {% endblock %}
