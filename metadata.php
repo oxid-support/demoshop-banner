@@ -3,7 +3,7 @@
 $sMetadataVersion = '2.1';
 
 $aModule = [
-    'id'          => 'oxdemo',
+    'id'          => 'oxsdemo',
     'title'       => 'OXID Demoshop Banner',
     'description' => [
         'en' => 'Shows demoshop banner with information about demoshops',
