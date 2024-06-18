@@ -1,0 +1,51 @@
+{% extends 'layout/page.html.twig' %}
+{% block content_main %}
+    {{ parent() }}
+
+    {{ style({ include: oViewConf.getModuleUrl('oxdemo', 'css/styles.css') }) }}
+
+    <div id="overlay"></div>
+    <div id="demoshop-banner">
+        <div id="banner-header">
+            <img src="{{ oViewConf.getModuleUrl('oxdemo', 'pictures/OXID_Logo.png') }}" alt="OXID Logo">
+            <button id="close-btn">X</button>
+        </div>
+        <div id="banner-content">
+            <hr>
+            <div id="banner-main">
+                <h2>{{ translate({ ident: 'OXDEMO_HEADER_MESSAGE' }) }}</h2>
+                <p style="text-align:center;">{{ translate({ ident: 'OXDEMO_IMPORTANT_MESSAGE' }) }}</p>
+                <br>
+                <p style="text-align:center;">{{ translate({ ident: 'OXDEMO_LOGIN_MESSAGE' }) }}</p>
+                <div id="banner-info">
+                    <div id="login-data">
+                        <h3>{{ translate({ ident: 'OXDEMO_LOGINDATA' }) }}</h3>
+                        <table>
+                            <tr>
+                                <th>{{ translate({ ident: 'OXDEMO_LOGIN' }) }}</th>
+                                <th>{{ translate({ ident: 'OXDEMO_PASS' }) }}</th>
+                            </tr>
+                            <tr>
+                                <td>Benutzer123</td>
+                                <td>Passwort123</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="additional-info">
+                        <h3>{{ translate({ ident: 'OXDEMO_INFO_HEADER' }) }}</h3>
+                        <p>{{ translate({ ident: 'OXDEMO_INFO' }) }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <hr>
+            <p>{{ translate({ ident: 'OXDEMO_CONFIRMATION' }) }}</p>
+            <button id="accept-btn">{{ translate({ ident: 'OXDEMO_CONFIRMATION_BUTTON' }) }}</button>
+        </div>
+    </div>
+    <button id="demoshop-toggle-btn">{{ translate({ ident: 'OXDEMO_BUTTON' }) }}</button>
+
+    {{ script({ include: oViewConf.getModuleUrl("oxdemo", "js/scripts.js") }) }}
+
+{% endblock %}
