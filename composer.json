@@ -1,10 +1,10 @@
 {
-    "name": "oxid-demoshop/demoshop-banner",
+    "name": "oxid-support/demoshop-banner",
     "description": "Shows demoshop message",
     "type": "oxideshop-module",
     "autoload": {
         "psr-4": {
-            "OxidDemoshop\\DemoshopBanner\\": "src/"
+            "OxidSupport\\DemoshopBanner\\": "src/"
         }
     }
 }
