@@ -14,5 +14,7 @@ $aLang = [
     'OXDEMO_INFO' => 'Wenn Sie weitere Informationen bezüglich Enterprise-relevanten Funktionen wie z.B. Mandantenfähigkeit benötigen oder Zugang zur Administrationsoberfläche mochten, können Sie uns gerne unter <a href="mailto:sales@oxid-esales.com" style="color: darkred;">sales@oxid-esales.com</a> kontaktieren.',
     'OXDEMO_CONFIRMATION' => 'Bitte bestätigen Sie, dass Sie den Hinweis gelesen haben.',
     'OXDEMO_CONFIRMATION_BUTTON' => 'Bestätigen',
-    'OXDEMO_BUTTON' => 'Demoshop-Modus'
+    'OXDEMO_BUTTON' => 'Demoshop-Modus',
+    'EMAIL' => 'test@test.com',
+    'PASS' => '1234'
 ];

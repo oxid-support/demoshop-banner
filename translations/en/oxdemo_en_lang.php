@@ -14,5 +14,7 @@ $aLang = [
     'OXDEMO_INFO' => 'If you need more information regarding enterprise-relevant features such as multi-client capability or would like access to the admin interface, please feel free to contact us at <a href="mailto:sales@oxid-esales.com" style="color: darkred;">sales@oxid-esales.com</a>.',
     'OXDEMO_CONFIRMATION' => 'Please confirm that you have read the notice.',
     'OXDEMO_CONFIRMATION_BUTTON' => 'Confirm',
-    'OXDEMO_BUTTON' => 'Demo Shop Mode'
+    'OXDEMO_BUTTON' => 'Demo Shop Mode',
+    'EMAIL' => 'test@test.com',
+    'PASS' => '1234'
 ];
