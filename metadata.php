@@ -14,8 +14,4 @@ $aModule = [
     'author'      => 'Adrian Frey',
     'url'         => 'https://www.oxid-esales.com/',
     'email'       => 'adrian.frey@oxid-esales.com',
-    'settings' => [
-        [
-        ],
-    ],
 ];
