@@ -41,15 +41,16 @@ body {
 }
 
 #banner-header img {
-    height: 60px;
+    height: 15%;
     width: 120px;
     margin-right: 10px;
 }
 
 #banner-content {
+    height: 70%;
     flex-grow: 1;
     overflow-y: auto;
-    padding: 10px 0; /* Optional padding for content */
+    padding: 10px 0;
 }
 
 #banner-content h2 {
@@ -64,6 +65,7 @@ body {
     border: none;
     font-size: 14px;
     cursor: pointer;
+    display: none;
 }
 
 #close-btn,
@@ -160,8 +162,22 @@ body {
     padding-top: 10px;
     padding-bottom: 20px;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 15%;
+    width: 100%;
     background-color: white;
-    z-index: 10;
+}
+
+.arrow-up {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    margin-left: 10px;
 }
 
 /* Responsive Styles */
@@ -191,34 +207,11 @@ body {
         margin: 10px 0 10px 0;
     }
 
-    #footer {
-        padding-top: 10px;
-        padding-bottom: 20px;
-        text-align: center;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: white;
-    }
-
     #demoshop-toggle-btn {
         position: fixed;
-        bottom: calc(20px + 50px); /* 20px über der Leiste, z.B. 50px */
-        right: 20px; /* Abstand von 20px vom rechten Rand */
-        z-index: 1001; /* Sicherstellen, dass der Button über anderen Elementen liegt */
-    }
-
-    .arrow {
-        border: solid black;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-    }
-
-    .up {
-        transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
+        bottom: calc(20px + 50px);
+        right: 20px;
+        z-index: 1001;
     }
 }
 

@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         demoshopToggleBtn.style.display = 'block';
         localStorage.setItem('cookieAccepted', 'true');
         closeBtn.style.display = 'block';
+        document.documentElement.style.overflowY = 'auto';
     }
 
     // Funktion zum Anzeigen des Banners
@@ -19,6 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
         demoshopBanner.style.display = 'block';
         overlay.style.display = 'block';
         demoshopToggleBtn.style.display = 'none';
+        if (!localStorage.getItem('cookieAccepted')) {
+            closeBtn.style.display = 'none';
+        } else {
+            closeBtn.style.display = "block";
+        }
+        document.documentElement.style.overflowY = 'hidden';
     }
 
     // Überprüfen, ob der Benutzer bereits zugestimmt hat
@@ -38,4 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Event Listener für den Toggle-Button
     demoshopToggleBtn.addEventListener('click', showDemoshopBanner);
+
+    document.head.insertAdjacentHTML("beforeend", "<style>.no-scroll { overflow: hidden; }</style>");
 });
