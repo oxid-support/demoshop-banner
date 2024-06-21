@@ -4,6 +4,7 @@ $sLangName = 'Deutsch';
 
 $aLang = [
     'charset'                   => 'UTF-8',
+    'OXDEMO_B2B_HEADER_MESSAGE' => 'Hinweise zum OXID eShop Enterprise-Demoshop B2B',
     'OXDEMO_HEADER_MESSAGE' => 'Hinweise zum OXID eShop Enterprise-Demoshop',
     'OXDEMO_IMPORTANT_MESSAGE' => 'Bitte beachten Sie, dass der Demoshop stündlich zurückgesetzt wird.',
     'OXDEMO_LOGIN_MESSAGE' =>  'Mit den unten angegebenen Login-Daten haben Sie die Möglichkeit unsere OXID eShop Enterprise Frontend-Funktionen zu durchstöbern.',

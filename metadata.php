@@ -1,5 +1,7 @@
 <?php
 
+use OxidEsales\Eshop\Application\Controller\StartController as oxStartController;
+use OxidSupport\DemoshopBanner\Controller\StartController as oxsDemobannerController;
 $sMetadataVersion = '2.1';
 
 $aModule = [
@@ -14,4 +16,7 @@ $aModule = [
     'author'      => 'Adrian Frey',
     'url'         => 'https://www.oxid-esales.com/',
     'email'       => 'adrian.frey@oxid-esales.com',
+    'extend'       => [
+        oxStartController::class => oxsDemobannerController::class,
+    ],
 ];

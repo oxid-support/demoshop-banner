@@ -1,11 +1,16 @@
 {% extends 'layout/page.html.twig' %}
 {% block content_main %}
-    {{ parent() }}
 
     {{ style({ include: oViewConf.getModuleUrl('oxsdemo', 'css/styles.css') }) }}
 
-    <div id="overlay"></div>
     <div id="demoshop-banner">
+        <script>
+            // Banner anzeigen, wenn kein Cookie
+            if (!localStorage.getItem('cookieAccepted') || localStorage.getItem('cookieAccepted') === 'false') {
+                document.getElementById('demoshop-banner').style.display = 'block';
+                document.documentElement.classList.add('no-scroll');
+            }
+        </script>
         <div id="banner-header">
             <img src="{{ oViewConf.getModuleUrl('oxsdemo', 'pictures/OXID_Logo.png') }}" alt="OXID Logo">
             <button id="close-btn">X</button>
@@ -13,7 +18,13 @@
         <div id="banner-content">
             <hr>
             <div id="banner-main">
-                <h2>{{ translate({ ident: 'OXDEMO_HEADER_MESSAGE' }) }}</h2>
+                <h2>
+                    {% if b2bActive %}
+                        <div>{{ translate({ ident: 'OXDEMO_B2B_HEADER_MESSAGE' }) }}</div>
+                    {% else %}
+                        <div>{{ translate({ ident: 'OXDEMO_HEADER_MESSAGE' }) }}</div>
+                    {% endif %}
+                </h2>
                 <p style="text-align:center;">{{ translate({ ident: 'OXDEMO_IMPORTANT_MESSAGE' }) }}</p>
                 <br>
                 <p style="text-align:center;">{{ translate({ ident: 'OXDEMO_LOGIN_MESSAGE' }) }}</p>
@@ -45,7 +56,14 @@
         </div>
     </div>
     <button id="demoshop-toggle-btn">{{ translate({ ident: 'OXDEMO_BUTTON' }) }}<span class="arrow-up"></span></button>
+    <script>
+        if (!localStorage.getItem('cookieAccepted') || localStorage.getItem('cookieAccepted') === 'false') {
+            document.getElementById('demoshop-toggle-btn').style.display = 'none';
+        }
+    </script>
 
     {{ script({ include: oViewConf.getModuleUrl("oxsdemo", "js/scripts.js") }) }}
+
+    {{ parent() }}
 
 {% endblock %}
