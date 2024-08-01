@@ -4,7 +4,6 @@ $sLangName = 'English';
 
 $aLang = [
     'charset'                   => 'UTF-8',
-    'OXDEMO_B2B_HEADER_MESSAGE' => 'Information about the OXID eShop Enterprise-Demoshop B2B',
     'OXDEMO_HEADER_MESSAGE' => 'Information about the OXID eShop Enterprise-Demoshop',
     'OXDEMO_IMPORTANT_MESSAGE' => 'Please note that the demo shop is reset hourly.',
     'OXDEMO_LOGIN_MESSAGE' => 'With the login data provided below, you have the opportunity to explore our OXID eShop Enterprise frontend features.',
@@ -13,6 +12,8 @@ $aLang = [
     'OXDEMO_PASS' => 'Password',
     'OXDEMO_INFO_HEADER' => 'Additional Information',
     'OXDEMO_INFO' => 'If you need more information regarding enterprise-relevant features such as multi-client capability or would like access to the admin interface, please feel free to contact us at <a href="mailto:sales@oxid-esales.com" style="color: darkred;">sales@oxid-esales.com</a>.',
+    'OXDEMO_DOCU_HEADER' => 'Documentation',
+    'OXDEMO_DOCU' => 'Do you need help? Have a look at our extensive <a href="https://docs.oxid-esales.com/eshop/en/latest/" style="color: darkred;">documentation</a>.',
     'OXDEMO_CONFIRMATION' => 'Please confirm that you have read the notice.',
     'OXDEMO_CONFIRMATION_BUTTON' => 'Confirm',
     'OXDEMO_BUTTON' => 'Informations',
