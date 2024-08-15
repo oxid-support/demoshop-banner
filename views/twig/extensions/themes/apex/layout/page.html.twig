@@ -20,14 +20,10 @@
         <div id="banner-content">
             <hr>
             <div id="banner-main">
-                <h2>
-                    {% if b2bActive %}
-                        <div>{{ translate({ ident: 'OXDEMO_B2B_HEADER_MESSAGE' }) }}</div>
-                        <script>localStorage.setItem('b2b', 'true');</script>
-                    {% else %}
-                        <div>{{ translate({ ident: 'OXDEMO_HEADER_MESSAGE' }) }}</div>
-                    {% endif %}
-                </h2>
+                {% if b2bActive %}
+                    <script>localStorage.setItem('b2b', 'true');</script>
+                {% endif %}
+                <h2 id="header-message">{{ translate({ ident: 'OXDEMO_HEADER_MESSAGE' }) }}</h2>
                 <p style="text-align:center;">{{ translate({ ident: 'OXDEMO_IMPORTANT_MESSAGE' }) }}</p>
                 <br>
                 <p style="text-align:center;">{{ translate({ ident: 'OXDEMO_LOGIN_MESSAGE' }) }}</p>
