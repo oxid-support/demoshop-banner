@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const headerMessage = document.getElementById('header-message');
     const isDesktop = window.innerWidth >= 1024;
 
-
     const tg = new tourguide.TourGuideClient({
         steps: steps,
         completeOnFinish: true,
@@ -59,11 +58,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const currentURL = window.location.href;
     const searchParams = window.location.search;
     const pathname = window.location.pathname;
+    const elementExists = document.querySelector('[name="basketname"]') !== null;
 
     console.log('Current URL:', currentURL);
     console.log('Current Search Params:', searchParams);
     console.log('Current Pathname:', pathname);
-
+    
     if (isDesktop) {
         switch (true) {
             case pathname.includes('/warenkorb') && !localStorage.getItem('basketCompleted'):
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     tg.start('eebasket').then(() => {
                         localStorage.setItem('basketCompleted', 'true');
                     });
-                } else if (localStorage.getItem('b2b')) {
+                } else if (localStorage.getItem('b2b') && elementExists) {
                     console.log('Starting b2b basket tour...');
                     tg.start('basket').then(() => {
                         localStorage.setItem('basketCompleted', 'true');
