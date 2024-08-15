@@ -12,7 +12,7 @@ $aModule = [
         'de' => 'Zeigt einen Banner für Demoshops mit Informationen an',
     ],
     'thumbnail'   => 'pictures/OXID_Logo.png',
-    'version'     => '1.0.0',
+    'version'     => '2.0.1',
     'author'      => 'Adrian Frey',
     'url'         => 'https://www.oxid-esales.com/',
     'email'       => 'adrian.frey@oxid-esales.com',
